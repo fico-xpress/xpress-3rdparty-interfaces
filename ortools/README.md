@@ -6,7 +6,7 @@ Examples demonstrating FICO&reg; Xpress integration with [Google OR-Tools](https
 
 | Example | Description | Notes |
 |---------|-------------|-------|
-| [facility_location](facility_location/) | Capacitated Facility Location Problem | Part of the "Xpress Everywhere" blog series
+| [facility_location](facility_location/) | Capacitated Facility Location Problem | Part of the ["Xpress Everywhere" blog series](https://community.fico.com/s/blog-post/a5QQp000000mC3hMAE/fico6620) |
 
 ## About OR-Tools
 

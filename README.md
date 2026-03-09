@@ -4,11 +4,11 @@ Integration examples for using [FICO&reg; Xpress Solver](https://www.fico.com/en
 
 ## Contents
 
-Library | Language | Description | Blog
---------|----------|-------------|------
-[OR-Tools](ortools/) | C++, Python | Google's Operations Research tools with Linear Solver and MathOpt interfaces | TBD
+| Library | Website | Language | Description | Blog |
+|---------|---------|----------|-------------|------|
+| [OR-Tools](ortools/) | [developers.google.com](https://developers.google.com/optimization) | C++, Python | Google's Operations Research tools with Linear Solver and MathOpt interfaces | [Blog](https://community.fico.com/s/blog-post/a5QQp000000mC3hMAE/fico6620) |
 
-More integrations coming soon: PyOptInterface, Pyomo, PuLP, linopy, JuMP, MiniZinc, CVXPY.
+**Note**: Examples with a "Blog" link are part of the "Xpress Everywhere" blog series on the [FICO&reg; Xpress Optimization Blog](https://community.fico.com/s/optimization-blog).
 
 ## Requirements
 
