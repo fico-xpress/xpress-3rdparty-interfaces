@@ -4,11 +4,11 @@ Integration examples for using [FICO&reg; Xpress Solver](https://www.fico.com/en
 
 ## Contents
 
-| Library | Website | Language | Description | Blog |
-|---------|---------|----------|-------------|------|
-| [OR-Tools](ortools/) | [developers.google.com](https://developers.google.com/optimization) | C++, Python | Google's Operations Research tools with Linear Solver and MathOpt interfaces | [Blog](https://community.fico.com/s/blog-post/a5QQp000000mC3hMAE/fico6620) |
+| Library | Website | Language | Description |
+|---------|---------|----------|-------------|
+| [OR-Tools](ortools/) | [developers.google.com](https://developers.google.com/optimization) | C++, Python | Google's Operations Research tools with Linear Solver and MathOpt interfaces |
 
-**Note**: Examples with a "Blog" link are part of the "Xpress Everywhere" blog series on the [FICO&reg; Xpress Optimization Blog](https://community.fico.com/s/optimization-blog).
+**Note**: Some library folders contain examples that are part of the "Xpress Everywhere" blog series on the [FICO&reg; Xpress Optimization Blog](https://community.fico.com/s/optimization-blog).
 
 ## Requirements
 
