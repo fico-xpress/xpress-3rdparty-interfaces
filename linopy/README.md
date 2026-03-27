@@ -4,9 +4,9 @@ Examples demonstrating FICO&reg; Xpress integration with [Linopy](https://linopy
 
 ## Examples
 
-| Example | Description |
-|---------|-------------|
-| [portfolio_linopy.py](portfolio_linopy.py) | Portfolio optimization with pandas-native variable and constraint definitions |
+| Example | Description | Notes |
+|---------|-------------|-------|
+| [portfolio_linopy.py](portfolio_linopy.py) | Portfolio optimization with pandas-native variable and constraint definitions | Part of the ["Xpress Everywhere" blog series](https://community.fico.com/s/blog-post/a5QQp000000nwyvMAA/fico6892) |
 
 ## About Linopy
 

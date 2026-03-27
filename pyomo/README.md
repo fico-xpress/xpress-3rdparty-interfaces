@@ -4,9 +4,9 @@ Examples demonstrating FICO&reg; Xpress integration with [Pyomo](https://www.pyo
 
 ## Examples
 
-| Example | Description |
-|---------|-------------|
-| [portfolio_pyomo.py](portfolio_pyomo.py) | Portfolio optimization with comprehensive MIQP model and solver parameters |
+| Example | Description | Notes |
+|---------|-------------|-------|
+| [portfolio_pyomo.py](portfolio_pyomo.py) | Portfolio optimization with comprehensive MIQP model and solver parameters | Part of the ["Xpress Everywhere" blog series](https://community.fico.com/s/blog-post/a5QQp000000nwyvMAA/fico6892) |
 
 ## About Pyomo
 

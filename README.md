@@ -13,7 +13,7 @@ Integration examples for using [FICO&reg; Xpress Solver](https://www.fico.com/en
 | [Pyomo](pyomo/) | [pyomo.org](https://www.pyomo.org/) | Python | Powerful algebraic modeling language for LP, MIP, QP, and more |
 | [PyOptInterface](pyoptinterface/) | [github.com/metab0t/PyOptInterface](https://github.com/metab0t/PyOptInterface) | Python | Direct C++ bindings with callbacks and full solver control |
 
-**Note**: Some library folders contain examples that are part of the ["Xpress Everywhere" blog series](https://community.fico.com/s/blog-post/a5QQp000000mC3hMAE/fico6620) on the FICO&reg; Xpress Optimization Blog.
+**Note**: Some library folders contain examples that are part of the ["Xpress Everywhere" blog series](https://community.fico.com/s/blog-post/a5QQp000000nwyvMAA/fico6892) on the FICO&reg; Xpress Optimization Blog.
 
 ## Python Examples
 

@@ -4,9 +4,9 @@ Examples demonstrating FICO&reg; Xpress integration with [PyOptInterface](https:
 
 ## Examples
 
-| Example | Description |
-|---------|-------------|
-| [portfolio_pyoptinterface.py](portfolio_pyoptinterface.py) | Portfolio optimization with direct C++ bindings, callbacks, and advanced solver features |
+| Example | Description | Notes |
+|---------|-------------|-------|
+| [portfolio_pyoptinterface.py](portfolio_pyoptinterface.py) | Portfolio optimization with direct C++ bindings, callbacks, and advanced solver features | Part of the ["Xpress Everywhere" blog series](https://community.fico.com/s/blog-post/a5QQp000000nwyvMAA/fico6892) |
 
 ## About PyOptInterface
 

@@ -4,9 +4,9 @@ Examples demonstrating FICO&reg; Xpress integration with [PuLP](https://coin-or.
 
 ## Examples
 
-| Example | Description |
-|---------|-------------|
-| [portfolio_pulp.py](portfolio_pulp.py) | Portfolio optimization with LP approximation and MIP constraints |
+| Example | Description | Notes |
+|---------|-------------|-------|
+| [portfolio_pulp.py](portfolio_pulp.py) | Portfolio optimization with LP approximation and MIP constraints | Part of the ["Xpress Everywhere" blog series](https://community.fico.com/s/blog-post/a5QQp000000nwyvMAA/fico6892) |
 
 ## About PuLP
 

@@ -4,9 +4,9 @@ Examples demonstrating FICO&reg; Xpress integration with [CVXPY](https://www.cvx
 
 ## Examples
 
-| Example | Description |
-|---------|-------------|
-| [portfolio_cvxpy.py](portfolio_cvxpy.py) | Portfolio optimization with quadratic objective and MIP constraints |
+| Example | Description | Notes |
+|---------|-------------|-------|
+| [portfolio_cvxpy.py](portfolio_cvxpy.py) | Portfolio optimization with quadratic objective and MIP constraints | Part of the ["Xpress Everywhere" blog series](https://community.fico.com/s/blog-post/a5QQp000000nwyvMAA/fico6892) |
 
 ## About CVXPY
 
