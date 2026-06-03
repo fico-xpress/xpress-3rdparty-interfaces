@@ -7,6 +7,7 @@ Integration examples for using [FICO&reg; Xpress Solver](https://www.fico.com/en
 | Library | Website | Language | Description |
 |---------|---------|----------|-------------|
 | [OR-Tools](ortools/) | [developers.google.com](https://developers.google.com/optimization) | C++, Python | Google's Operations Research tools with Linear Solver and MathOpt interfaces |
+| [JuMP](jump/) | [jump.dev](https://jump.dev/) | Julia | Algebraic modeling language for Julia with MathOptInterface solver backend |
 | [CVXPY](cvxpy/) | [cvxpy.org](https://www.cvxpy.org/) | Python | Disciplined convex programming with automatic reformulation |
 | [Linopy](linopy/) | [linopy.readthedocs.io](https://linopy.readthedocs.io/) | Python | Pandas-native optimization for data-driven workflows |
 | [PuLP](pulp/) | [coin-or.github.io/pulp](https://coin-or.github.io/pulp/) | Python | Beginner-friendly LP/MIP modeling library |
