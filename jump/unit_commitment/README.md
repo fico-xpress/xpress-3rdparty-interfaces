@@ -4,7 +4,7 @@ Power generator scheduling (Unit Commitment) solved using two different Julia in
 
 ## Related Blog Post
 
-See the ["Xpress Everywhere" blog series](https://community.fico.com/s/xpress-blog) for detailed explanations of these implementations.
+See the ["Xpress Everywhere" blog series](https://community.fico.com/s/blog-post/a5QQp000000vjQDMAY/fico7419) for detailed explanations of these implementations.
 
 ## Problem Description
 

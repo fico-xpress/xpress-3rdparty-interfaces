@@ -6,7 +6,7 @@ Examples demonstrating FICO&reg; Xpress integration with [JuMP](https://jump.dev
 
 | Example | Description | Notes |
 |---------|-------------|-------|
-| [unit_commitment](unit_commitment/) | Power Generator Scheduling (Unit Commitment) | Part of the ["Xpress Everywhere" blog series](https://community.fico.com/s/blog-post/a5QQp000000nwyvMAA/fico6892) |
+| [unit_commitment](unit_commitment/) | Power Generator Scheduling (Unit Commitment) | Part of the ["Xpress Everywhere" blog series](https://community.fico.com/s/blog-post/a5QQp000000vjQDMAY/fico7419) |
 
 ## About JuMP
 
