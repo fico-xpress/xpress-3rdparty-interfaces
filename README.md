@@ -7,26 +7,41 @@ Integration examples for using [FICO&reg; Xpress Solver](https://www.fico.com/en
 | Library | Website | Language | Description |
 |---------|---------|----------|-------------|
 | [OR-Tools](ortools/) | [developers.google.com](https://developers.google.com/optimization) | C++, Python | Google's Operations Research tools with Linear Solver and MathOpt interfaces |
-| [JuMP](jump/) | [jump.dev](https://jump.dev/) | Julia | Algebraic modeling language for Julia with MathOptInterface solver backend |
 | [CVXPY](cvxpy/) | [cvxpy.org](https://www.cvxpy.org/) | Python | Disciplined convex programming with automatic reformulation |
 | [Linopy](linopy/) | [linopy.readthedocs.io](https://linopy.readthedocs.io/) | Python | Pandas-native optimization for data-driven workflows |
 | [PuLP](pulp/) | [coin-or.github.io/pulp](https://coin-or.github.io/pulp/) | Python | Beginner-friendly LP/MIP modeling library |
 | [Pyomo](pyomo/) | [pyomo.org](https://www.pyomo.org/) | Python | Powerful algebraic modeling language for LP, MIP, QP, and more |
 | [PyOptInterface](pyoptinterface/) | [github.com/metab0t/PyOptInterface](https://github.com/metab0t/PyOptInterface) | Python | Direct C++ bindings with callbacks and full solver control |
+| [JuMP](jump/) | [jump.dev](https://jump.dev/) | Julia | High-level algebraic modeling with JuMP and direct XpressAPI.jl C API |
 
-**Note**: Some library folders contain examples that are part of the ["Xpress Everywhere" blog series](https://community.fico.com/s/blog-post/a5QQp000000nwyvMAA/fico6892) on the FICO&reg; Xpress Optimization Blog.
+**Note**: Some library folders contain examples that are part of the ["Xpress Everywhere" blog series](https://community.fico.com/s/blog-post/a5QQp000000vjQDMAY/fico7419) on the FICO&reg; Xpress Optimization Blog.
+
+## Supported Features
+
+Not all interfaces expose the same Xpress capabilities:
+
+| Feature | PuLP | Pyomo | Linopy | PyOptInterface | CVXPY | OR-Tools | JuMP | MiniZinc |
+| ------- | :--: | :---: | :----: | :------------: | :---: | :------: | :--: | :------: |
+| LP | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| QP Objective | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| QCQP | | ✓ | | ✓ | ✓ | ✓ | ✓ | ✓ |
+| MIP | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| SOCP | | ○ | | ✓ | ✓ | ✓ | ✓ | ○ |
+| NLP | | | | ✓ | | | ✓ | ○ |
+| SOS Constraints | ✓ | ✓ | | ✓ | | ✓ | ✓ | |
+| Indicator Constraints | | | | | | ✓ | ✓ | ✓ |
+| Lazy Constraints | | ○ | | ✓ | | ✓ | ✓ | |
+| Warm Start | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Multi-Objective | | | | | | ✓ | | ○ |
+| Callbacks | | ○ | | ✓ | | | ✓ | |
+| Solver Parameters | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| In-Memory API | ✓ | ✓ | ○ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+**Legend:** ✓ = supported | blank = not supported by the library | ○ = supported by the library but not yet in the Xpress interface | In-Memory API = model is built and solved in-process without writing intermediate files (via the Xpress Python, C++, or C API)
 
 ## Python Examples
 
-The Python library examples share a common portfolio optimization problem defined in the [data/](data/) folder. Each library demonstrates different capabilities:
-
-| Library | QP Support | MIP | SOS | Warm Start | Callbacks |
-|---------|------------|-----|-----|------------|-----------|
-| CVXPY | Yes | Yes | No | Yes | No |
-| Linopy | Yes | Yes | No | No | No |
-| PuLP | No (LP only) | Yes | No | Yes | No |
-| Pyomo | Yes | Yes | Yes | Yes | No |
-| PyOptInterface | Yes | Yes | Yes | Yes | Yes |
+The Python library examples share a common portfolio optimization problem defined in the [data/](data/) folder. Each library demonstrates different capabilities - see [Supported Features](#supported-features) above for the full breakdown.
 
 ### Running the Python examples
 
