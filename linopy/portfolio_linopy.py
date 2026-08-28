@@ -129,10 +129,11 @@ def solve_portfolio():
     # =========================================================================
     # SOLVE
     # =========================================================================
-    print(f"\n[Solver] Using FICO Xpress via Linopy (file I/O)")
+    print(f"\n[Solver] Using FICO Xpress via Linopy (in-memory/direct API)")
 
     result = model.solve(
         solver_name="xpress",
+        io_api="direct",
         **{
             "OUTPUTLOG": 1,
             "TIMELIMIT": TIME_LIMIT,

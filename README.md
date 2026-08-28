@@ -7,37 +7,52 @@ Integration examples for using [FICO&reg; Xpress Solver](https://www.fico.com/en
 | Library | Website | Language | Description |
 |---------|---------|----------|-------------|
 | [OR-Tools](ortools/) | [developers.google.com](https://developers.google.com/optimization) | C++, Python | Google's Operations Research tools with Linear Solver and MathOpt interfaces |
-| [CVXPY](cvxpy/) | [cvxpy.org](https://www.cvxpy.org/) | Python | Disciplined convex programming with automatic reformulation |
-| [Linopy](linopy/) | [linopy.readthedocs.io](https://linopy.readthedocs.io/) | Python | Pandas-native optimization for data-driven workflows |
-| [PuLP](pulp/) | [coin-or.github.io/pulp](https://coin-or.github.io/pulp/) | Python | Beginner-friendly LP/MIP modeling library |
-| [Pyomo](pyomo/) | [pyomo.org](https://www.pyomo.org/) | Python | Powerful algebraic modeling language for LP, MIP, QP, and more |
 | [PyOptInterface](pyoptinterface/) | [github.com/metab0t/PyOptInterface](https://github.com/metab0t/PyOptInterface) | Python | Direct C++ bindings with callbacks and full solver control |
+| [Pyomo](pyomo/) | [pyomo.org](https://www.pyomo.org/) | Python | Powerful algebraic modeling language for LP, MIP, QP, and more |
+| [PuLP](pulp/) | [coin-or.github.io/pulp](https://coin-or.github.io/pulp/) | Python | Beginner-friendly LP/MIP modeling library |
+| [Linopy](linopy/) | [linopy.readthedocs.io](https://linopy.readthedocs.io/) | Python | Pandas-native optimization for data-driven workflows |
+| [CVXPY](cvxpy/) | [cvxpy.org](https://www.cvxpy.org/) | Python | Disciplined convex programming with automatic reformulation |
 | [JuMP](jump/) | [jump.dev](https://jump.dev/) | Julia | High-level algebraic modeling with JuMP and direct XpressAPI.jl C API |
 
 **Note**: Some library folders contain examples that are part of the ["Xpress Everywhere" blog series](https://community.fico.com/s/blog-post/a5QQp000000vjQDMAY/fico7419) on the FICO&reg; Xpress Optimization Blog.
+
+### Other supported libraries
+
+These libraries support Xpress but do not yet have an example folder in this repository:
+
+| Library | Website | Language | Description |
+|---------|---------|----------|-------------|
+| [MiniZinc](https://github.com/MiniZinc/libminizinc) | [minizinc.org](https://www.minizinc.org/) | MiniZinc | Declarative constraint modeling language with a FlatZinc interface |
+| [CasADi](https://github.com/casadi/casadi) | [web.casadi.org](https://web.casadi.org/) | Python, C++, MATLAB/Octave | Symbolic framework for algorithmic differentiation and numeric optimization |
 
 ## Supported Features
 
 Not all interfaces expose the same Xpress capabilities:
 
-| Feature | PuLP | Pyomo | Linopy | PyOptInterface | CVXPY | OR-Tools | JuMP | MiniZinc |
-| ------- | :--: | :---: | :----: | :------------: | :---: | :------: | :--: | :------: |
-| LP | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| QP Objective | | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| QCQP | | ✓ | | ✓ | ✓ | ✓ | ✓ | ✓ |
-| MIP | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| SOCP | | ○ | | ✓ | ✓ | ✓ | ✓ | ○ |
-| NLP | | | | ✓ | | | ✓ | ○ |
-| SOS Constraints | ✓ | ✓ | | ✓ | | ✓ | ✓ | |
-| Indicator Constraints | | | | | | ✓ | ✓ | ✓ |
-| Lazy Constraints | | ○ | | ✓ | | ✓ | ✓ | |
-| Warm Start | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Multi-Objective | | | | | | ✓ | | ○ |
-| Callbacks | | ○ | | ✓ | | | ✓ | |
-| Solver Parameters | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| In-Memory API | ✓ | ✓ | ○ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Feature | OR-Tools | PyOptInterface | Pyomo | PuLP | Linopy | CVXPY | JuMP | MiniZinc | CasADi |
+| ------- | :------: | :------------: | :---: | :--: | :----: | :---: | :--: | :------: | :-----: |
+| LP | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
+| QP | &#10003; | &#10003; | &#10003; | | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
+| QCQP | &#10003; | &#10003; | &#10003; | | | &#10003; | &#10003; | &#10003; | |
+| MIP | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
+| SOCP | &#10003; | &#10003; | &#10003; | | | &#10003; | &#10003; | | &#10003; |
+| NLP | | &#10003; | &#10003;&#42; | | | | &#10003; | &#9675; | &#9675; |
+| SOS Constraints | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | | &#10003; | | &#10003; |
+| Indicator Constraints | &#10003; | | | | | | &#10003; | &#10003; | |
+| Lazy Constraints | &#10003; | &#10003; | &#9675; | | | | &#10003; | &#10003; | &#9675; |
+| Warm Start | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003;&#42; | &#10003; |
+| Multi-Objective | &#10003; | | &#10003;&#42; | | | | &#10003; | &#10003; | |
+| Callbacks | &#10003;&#42; | &#10003; | &#9675; | | | | &#10003;&#42; | &#10003; | &#9675; |
+| Infeasibility Analysis (IIS) | | &#10003; | &#10003;&#42; | | &#10003; | | &#10003; | &#10003;&#42; | &#10003; |
+| Solver Parameters | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
+| In-Memory API | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
 
-**Legend:** ✓ = supported | blank = not supported by the library | ○ = supported by the library but not yet in the Xpress interface | In-Memory API = model is built and solved in-process without writing intermediate files (via the Xpress Python, C++, or C API)
+**Legend:**
+
+- &#10003; = supported
+- &#10003;&#42; = supported, but the Xpress interface implementation is under review
+- &#9675; = supported by the library but not yet in the Xpress interface
+- blank = not supported by the library
 
 ## Python Examples
 
@@ -47,15 +62,15 @@ The Python library examples share a common portfolio optimization problem define
 
 ```bash
 # Install dependencies (each library needs xpress package)
-pip install xpress cvxpy pyomo pulp linopy pyoptinterface
+pip install xpress pyoptinterface pyomo pulp linopy cvxpy
 
 # Run from repository root
 cd xpress-3rdparty-interfaces
-python cvxpy/portfolio_cvxpy.py
-python linopy/portfolio_linopy.py
-python pulp/portfolio_pulp.py
-python pyomo/portfolio_pyomo.py
 python pyoptinterface/portfolio_pyoptinterface.py
+python pyomo/portfolio_pyomo.py
+python pulp/portfolio_pulp.py
+python linopy/portfolio_linopy.py
+python cvxpy/portfolio_cvxpy.py
 ```
 
 ## Requirements
