@@ -13,6 +13,7 @@ Integration examples for using [FICO&reg; Xpress Solver](https://www.fico.com/en
 | [Linopy](linopy/) | [linopy.readthedocs.io](https://linopy.readthedocs.io/) | Python | Pandas-native optimization for data-driven workflows |
 | [CVXPY](cvxpy/) | [cvxpy.org](https://www.cvxpy.org/) | Python | Disciplined convex programming with automatic reformulation |
 | [JuMP](jump/) | [jump.dev](https://jump.dev/) | Julia | High-level algebraic modeling with JuMP and direct XpressAPI.jl C API |
+| [ojAlgo](ojalgo/) | [ojalgo.org](https://www.ojalgo.org/mathematical-optimisation/xpress/) | Java | Pure Java optimization library; models built with its ExpressionsBasedModel are solved by Xpress |
 
 **Note**: Some library folders contain examples that are part of the ["Xpress Everywhere" blog series](https://community.fico.com/s/blog-post/a5QQp000000vjQDMAY/fico7419) on the FICO&reg; Xpress Optimization Blog.
 
@@ -29,23 +30,23 @@ These libraries support Xpress but do not yet have an example folder in this rep
 
 Not all interfaces expose the same Xpress capabilities:
 
-| Feature | OR-Tools | PyOptInterface | Pyomo | PuLP | Linopy | CVXPY | JuMP | MiniZinc | CasADi |
-| ------- | :------: | :------------: | :---: | :--: | :----: | :---: | :--: | :------: | :-----: |
-| LP | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
-| QP | &#10003; | &#10003; | &#10003; | | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
-| QCQP | &#10003; | &#10003; | &#10003; | | | &#10003; | &#10003; | &#10003; | |
-| MIP | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
-| SOCP | &#10003; | &#10003; | &#10003; | | | &#10003; | &#10003; | | &#10003; |
-| NLP | | &#10003; | &#10003;&#42; | | | | &#10003; | &#9675; | &#9675; |
-| SOS Constraints | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | | &#10003; | | &#10003; |
-| Indicator Constraints | &#10003; | | | | | | &#10003; | &#10003; | |
-| Lazy Constraints | &#10003; | &#10003; | &#9675; | | | | &#10003; | &#10003; | &#9675; |
-| Warm Start | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003;&#42; | &#10003; |
-| Multi-Objective | &#10003; | | &#10003;&#42; | | | | &#10003; | &#10003; | |
-| Callbacks | &#10003;&#42; | &#10003; | &#9675; | | | | &#10003;&#42; | &#10003; | &#9675; |
-| Infeasibility Analysis (IIS) | | &#10003; | &#10003;&#42; | | &#10003; | | &#10003; | &#10003;&#42; | &#10003; |
-| Solver Parameters | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
-| In-Memory API | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
+| Feature | OR-Tools | PyOptInterface | Pyomo | PuLP | Linopy | CVXPY | JuMP | ojAlgo | MiniZinc | CasADi |
+| ------- | :------: | :------------: | :---: | :--: | :----: | :---: | :--: | :----: | :------: | :-----: |
+| LP | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
+| QP | &#10003; | &#10003; | &#10003; | | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
+| QCQP | &#10003; | &#10003; | &#10003; | | | &#10003; | &#10003; | &#9675; | &#10003; | |
+| MIP | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
+| SOCP | &#10003; | &#10003; | &#10003; | | | &#10003; | &#10003; | | | &#10003; |
+| NLP | | &#10003; | &#10003;&#42; | | | | &#10003; | | &#9675; | &#9675; |
+| SOS Constraints | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | | &#10003; | &#9675; | | &#10003; |
+| Indicator Constraints | &#10003; | | | | | | &#10003; | | &#10003; | |
+| Lazy Constraints | &#10003; | &#10003; | &#9675; | | | | &#10003; | | &#10003; | &#9675; |
+| Warm Start | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#9675; | &#10003;&#42; | &#10003; |
+| Multi-Objective | &#10003; | | &#10003;&#42; | | | | &#10003; | | &#10003; | |
+| Callbacks | &#10003;&#42; | &#10003; | &#9675; | | | | &#10003;&#42; | | &#10003; | &#9675; |
+| Infeasibility Analysis (IIS) | | &#10003; | &#10003;&#42; | | &#10003; | | &#10003; | | &#10003;&#42; | &#10003; |
+| Solver Parameters | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
+| In-Memory API | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
 
 **Legend:**
 
@@ -56,7 +57,7 @@ Not all interfaces expose the same Xpress capabilities:
 
 ## Python Examples
 
-The Python library examples share a common portfolio optimization problem defined in the [data/](data/) folder. Each library demonstrates different capabilities - see [Supported Features](#supported-features) above for the full breakdown.
+The Python library examples share a common portfolio optimization problem defined in the [data/](data/) folder, and the [ojAlgo](ojalgo/) example solves the same problem in Java. Each library demonstrates different capabilities - see [Supported Features](#supported-features) above for the full breakdown.
 
 ### Running the Python examples
 
