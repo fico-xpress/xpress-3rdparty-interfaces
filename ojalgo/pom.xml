@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.fico.xpress.examples</groupId>
+    <artifactId>portfolio-ojalgo</artifactId>
+    <version>1.0.0</version>
+    <name>Portfolio optimization with ojAlgo and FICO Xpress</name>
+
+    <properties>
+        <maven.compiler.release>11</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- ojAlgo's integration with Xpress, from Maven Central; brings ojAlgo with it -->
+        <dependency>
+            <groupId>org.ojalgo</groupId>
+            <artifactId>ojalgo-xpress</artifactId>
+            <version>1.2.0</version>
+        </dependency>
+        <!-- The Xpress Java API, from your Xpress installation -->
+        <dependency>
+            <groupId>com.fico.xpress</groupId>
+            <artifactId>xprs</artifactId>
+            <version>local</version>
+            <scope>system</scope>
+            <systemPath>${env.XPRESSDIR}/lib/xprs.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- mvn compile exec:exec runs the example in a new JVM, with Xpress's native libraries on the library path -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <executable>java</executable>
+                    <classpathScope>compile</classpathScope>
+                    <arguments>
+                        <argument>-Djava.library.path=${env.XPRESSDIR}/lib</argument>
+                        <argument>-classpath</argument>
+                        <classpath />
+                        <argument>PortfolioOjAlgo</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
